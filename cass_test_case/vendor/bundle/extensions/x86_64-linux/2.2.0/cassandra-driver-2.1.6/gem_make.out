@@ -1,0 +1,18 @@
+/home/luke/.rvm/rubies/ruby-2.2.4/bin/ruby -r ./siteconf20160812-21619-15my1bw.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cassandra_murmur3.c
+cassandra_murmur3.c: In function ‘rb_murmur3_hash’:
+cassandra_murmur3.c:78:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const int nblocks = length / 16;
+   ^
+cassandra_murmur3.c:119:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const int8_t* tail = (const int8_t*) (bytes + nblocks * 16);
+   ^
+linking shared-object cassandra_murmur3.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cassandra_murmur3.so ./.gem.20160812-21619-1p24tal
